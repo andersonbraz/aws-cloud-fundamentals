@@ -22,3 +22,15 @@ O Amazon CloudWatch Events fornece um fluxo quase em tempo real de eventos do si
 Você pode usar o Amazon CloudWatch Logs para monitorar, armazenar e acessar seus arquivos de log a partir de instâncias do Amazon EC2, AWS CloudTrail, Amazon Route 53 e outras fontes. Em seguida, você pode recuperar os dados de log associados do CloudWatch Logs.
 
 Você pode coletar métricas de servidores instalando o agente CloudWatch no servidor. Você pode instalar o agente nas instâncias do Amazon EC2 e nos servidores locais e nos servidores que executam o Linux ou o Windows Server.
+
+---
+
+O **Elastic Load Balancing** (ELB) distribui automaticamente o tráfego de aplicativos recebidos por vários destinos, como instâncias, contêineres e endereços IP do Amazon EC2. Ele pode lidar com a carga variável do tráfego do seu aplicativo em uma única zona de disponibilidade ou em várias zonas de disponibilidade.
+
+O ELB oferece três tipos de balanceadores de carga, todos com alta disponibilidade, dimensionamento automático e segurança robusta, necessários para tornar seus aplicativos tolerantes a falhas.
+
+Um **Application Load Balancer** opera no nível da solicitação (Camada 7), roteando o tráfego para destinos - como instâncias do EC2, microsserviços e contêineres - no Amazon VPC, com base no conteúdo da solicitação. É ideal para o balanceamento de carga avançado do tráfego HTTP (Hypertext Transfer Protocol) e HTTP seguro (HTTPS).
+
+Um **Network Load Balancer** opera no nível da conexão (Camada 4), roteando conexões para destinos - como instâncias do Amazon EC2, microsserviços e contêineres - no Amazon VPC, com base nos dados do protocolo IP. É ideal para balancear o tráfego TCP (Transmission Control Protocol).
+
+O **Classic Load Balancer** fornece balanceamento de carga básico em várias instâncias do Amazon EC2 e opera no nível de solicitação e no nível de conexão.
