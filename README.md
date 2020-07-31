@@ -25,12 +25,18 @@ Você pode coletar métricas de servidores instalando o agente CloudWatch no ser
 
 ---
 
-O **Elastic Load Balancing** (ELB) distribui automaticamente o tráfego de aplicativos recebidos por vários destinos, como instâncias, contêineres e endereços IP do Amazon EC2. Ele pode lidar com a carga variável do tráfego do seu aplicativo em uma única zona de disponibilidade ou em várias zonas de disponibilidade.
+## Elastic Load Balancing
 
-O ELB oferece três tipos de balanceadores de carga, todos com alta disponibilidade, dimensionamento automático e segurança robusta, necessários para tornar seus aplicativos tolerantes a falhas.
+O Elastic Load Balancing distribui automaticamente o tráfego de entrada de aplicativos entre diversos destinos, como instâncias do Amazon EC2, contêineres, endereços IP e funções Lambda. O serviço pode lidar com a carga variável de tráfego dos aplicativos em uma única zona de disponibilidade ou em diversas zonas de disponibilidade. O Elastic Load Balancing oferece três tipos de load balancers, todos eles com a alta disponibilidade, a escalabilidade automática e a segurança robusta necessárias para tornar os aplicativos tolerantes a falhas.
 
-Um **Application Load Balancer** opera no nível da solicitação (Camada 7), roteando o tráfego para destinos - como instâncias do EC2, microsserviços e contêineres - no Amazon VPC, com base no conteúdo da solicitação. É ideal para o balanceamento de carga avançado do tráfego HTTP (Hypertext Transfer Protocol) e HTTP seguro (HTTPS).
+### Application Load Balancer
 
-Um **Network Load Balancer** opera no nível da conexão (Camada 4), roteando conexões para destinos - como instâncias do Amazon EC2, microsserviços e contêineres - no Amazon VPC, com base nos dados do protocolo IP. É ideal para balancear o tráfego TCP (Transmission Control Protocol).
+O Application Load Balancer é mais adequado ao balanceamento de carga de tráfego HTTP e HTTPS e oferece roteamento avançado de solicitações para a entrega de arquiteturas modernas de aplicativos, incluindo microsserviços e contêineres. Operando no nível de solicitação individual (camada 7), o Application Load Balancer roteia tráfego a destinos dentro do Amazon Virtual Private Cloud (Amazon VPC) de acordo com o conteúdo da solicitação.
 
-O **Classic Load Balancer** fornece balanceamento de carga básico em várias instâncias do Amazon EC2 e opera no nível de solicitação e no nível de conexão.
+### Network Load Balancer
+
+O Network Load Balancer é mais adequado ao balanceamento de carga de tráfego TCP (Transmission Control Protocol), UDP (User Datagram Protocol) e TLS (Transport Layer Security) que exige performance extrema. Operando no nível de conexão (camada 4), o Network Load Balancer roteia tráfego a destinos dentro do Amazon Virtual Private Cloud (Amazon VPC) e é capaz de lidar com milhões de solicitações por segundo, mantendo latências ultrabaixas. O Network Load Balancer também é otimizado para lidar com padrões de tráfego súbitos e voláteis.
+
+### Classic Load Balancer
+
+O Classic Load Balancer fornece load balancing básico entre diversas instâncias do Amazon EC2 e opera com solicitações e conexões. O Classic Load Balancer é destinado a aplicativos criados dentro da rede EC2-Classic
